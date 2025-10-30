@@ -53,7 +53,7 @@ export function Process() {
 
         <div className="relative">
           {/* Timeline line - Desktop only */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#F5F5F7]/10 hidden md:block -translate-x-1/2">
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-[#F5F5F7]/10 hidden md:block -translate-x-1/2">
             <motion.div
               className="absolute top-0 left-0 right-0 bg-gradient-to-b from-[#F26B2D] to-[#FF8E3C]"
               style={{ height: lineHeight }}
@@ -61,7 +61,7 @@ export function Process() {
           </div>
 
           {/* Mobile timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-[#F5F5F7]/10 md:hidden">
+          <div className="absolute left-8 top-0 bottom-0 w-[2px] bg-[#F5F5F7]/10 md:hidden">
             <motion.div
               className="absolute top-0 left-0 right-0 bg-gradient-to-b from-[#F26B2D] to-[#FF8E3C]"
               style={{ height: lineHeight }}
@@ -69,7 +69,7 @@ export function Process() {
           </div>
 
           {/* Steps */}
-          <div className="space-y-12 sm:space-y-20">
+          <div className="space-y-14 sm:space-y-24">
             {processSteps.map((step, index) => {
               const Icon = step.icon;
               const isEven = index % 2 === 0;
@@ -100,20 +100,20 @@ export function Process() {
                       }}
                     >
                       <motion.div
-                        className="w-16 h-16 rounded-full bg-gradient-to-br from-[#F26B2D] to-[#FF8E3C] flex items-center justify-center relative"
+                        className="w-16 h-16 rounded-full bg-gradient-to-br from-[#F26B2D] to-[#FF8E3C] flex items-center justify-center relative shadow-lg shadow-[#F26B2D]/20 ring-4 ring-[#F26B2D]/10"
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Icon className="w-8 h-8 text-white" />
+                        <Icon className="w-7 h-7 text-white" />
                         
                         {/* Pulsing ring */}
                         <motion.div
-                          className="absolute inset-0 rounded-full border-2 border-[#F26B2D]"
+                          className="absolute inset-0 rounded-full border border-[#F26B2D]/50"
                           animate={{
-                            scale: [1, 1.5, 1],
-                            opacity: [0.5, 0, 0.5],
+                            scale: [1, 1.3, 1],
+                            opacity: [0.35, 0, 0.35],
                           }}
                           transition={{
-                            duration: 2,
+                            duration: 2.2,
                             repeat: Infinity,
                             delay: index * 0.3,
                           }}
@@ -122,7 +122,7 @@ export function Process() {
                     </motion.div>
 
                     {/* Content - Mobile */}
-                    <div className="flex-1 pt-2">
+                    <div className="flex-1 pt-2 text-left">
                       <motion.div
                         className="mb-3"
                         initial={{ scale: 0 }}
@@ -134,17 +134,17 @@ export function Process() {
                           delay: index * 0.2 + 0.2 
                         }}
                       >
-                        <span className="text-[#F26B2D]/50 block">{step.number}</span>
+                        <span className="text-[#F26B2D] tracking-wide text-sm font-medium block">{step.number}</span>
                       </motion.div>
                       
-                      <h3 className="text-white mb-2">{step.title}</h3>
-                      <p className="text-[#F5F5F7]/70 leading-relaxed">{step.description}</p>
+                      <h3 className="text-white text-2xl font-semibold mb-2">{step.title}</h3>
+                      <p className="text-[#F5F5F7]/75 text-base leading-relaxed">{step.description}</p>
                     </div>
                   </div>
 
                   {/* Desktop Layout */}
                   <div className={`hidden md:flex md:flex-1 items-center ${isEven ? 'justify-end md:pr-16' : 'justify-start md:pl-16'}`}>
-                    <div className={`${isEven ? 'text-right' : 'text-left'} max-w-md`}>
+                    <div className={`${isEven ? 'text-right' : 'text-left'} max-w-lg`}>
                       <motion.div
                         className={`inline-block mb-3 ${!isEven ? 'block' : ''}`}
                         initial={{ scale: 0 }}
@@ -156,11 +156,11 @@ export function Process() {
                           delay: index * 0.2 + 0.2 
                         }}
                       >
-                        <span className="text-[#F26B2D]/50 block">{step.number}</span>
+                        <span className="text-[#F26B2D] tracking-wide text-sm font-medium block">{step.number}</span>
                       </motion.div>
                       
-                      <h3 className="text-white mb-3">{step.title}</h3>
-                      <p className="text-[#F5F5F7]/70 leading-relaxed">{step.description}</p>
+                      <h3 className="text-white text-3xl font-semibold mb-3">{step.title}</h3>
+                      <p className="text-[#F5F5F7]/75 text-lg leading-relaxed">{step.description}</p>
                     </div>
                   </div>
 
@@ -177,21 +177,21 @@ export function Process() {
                     }}
                   >
                     <motion.div
-                      className="w-20 h-20 rounded-full bg-gradient-to-br from-[#F26B2D] to-[#FF8E3C] flex items-center justify-center relative"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
+                      className="w-20 h-20 rounded-full bg-gradient-to-br from-[#F26B2D] to-[#FF8E3C] flex items-center justify-center relative shadow-xl shadow-[#F26B2D]/20 ring-8 ring-[#F26B2D]/10"
+                      whileHover={{ scale: 1.06, rotate: 3 }}
+                      transition={{ duration: 0.25 }}
                     >
-                      <Icon className="w-10 h-10 text-white" />
+                      <Icon className="w-9 h-9 text-white" />
                       
                       {/* Pulsing ring */}
                       <motion.div
-                        className="absolute inset-0 rounded-full border-2 border-[#F26B2D]"
+                        className="absolute inset-0 rounded-full border border-[#F26B2D]/50"
                         animate={{
-                          scale: [1, 1.5, 1],
-                          opacity: [0.5, 0, 0.5],
+                          scale: [1, 1.25, 1],
+                          opacity: [0.35, 0, 0.35],
                         }}
                         transition={{
-                          duration: 2,
+                          duration: 2.2,
                           repeat: Infinity,
                           delay: index * 0.3,
                         }}
