@@ -36,7 +36,7 @@ export function Showreel() {
     <section id="work" ref={containerRef} className="py-20 sm:py-32 bg-[#0E1116] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 sm:mb-16">
         <motion.h2
-          className="text-white"
+          className="text-white text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -46,7 +46,7 @@ export function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-white mb-3 sm:mb-4">What We Do</h2>
+          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-3 sm:mb-4">What We Do</h2>
           <p className="text-[#F5F5F7]/70 max-w-2xl mx-auto px-4">
             Full-spectrum design services to elevate your startup
           </p>

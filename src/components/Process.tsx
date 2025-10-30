@@ -45,7 +45,7 @@ export function Process() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-white mb-3 sm:mb-4 px-4">We Launch Fast. We Design for Impact.</h2>
+          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-3 sm:mb-4 px-4">We Launch Fast. We Design for Impact.</h2>
           <p className="text-[#F5F5F7]/70 max-w-2xl mx-auto px-4">
             Our streamlined process ensures your startup goes from concept to launch in record time
           </p>
